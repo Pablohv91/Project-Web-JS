@@ -1,0 +1,359 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+
+/* Aqui creamos la pagina que esta encima de la foto gracias que hemos creado una
+'<section>' global para esto */
+#global{
+	width: 65%;
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 20px;
+	background: white;
+	box-shadow: 5px 0px 10px gray;
+}
+
+#logo{
+	font-family: Verdana , Arial;
+	font-size: 20px;
+	letter-spacing: 4px;
+	line-height: 52px;
+	color: white;
+	text-align: center;
+	/* Asi es como el centra el color del texto... dandole medidas a la caja */
+	width: 280px;
+	height: 50px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+
+/* Al menu como grupo le damos estos atributos */
+#menu{
+	font-family: Helvetica, Arial;
+	background: #333;
+	width: 100%;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+/* todos los elementos ul que hay dentro del menu */
+#menu ul{
+	line-height: 46px;
+
+}
+
+/* A los elementos li que hay dentro del menu */
+#menu ul li{
+	height: 46px;
+	/* Poner un elemento detras de otro */
+	display: inline-block;
+	/* Cuando pinche encima de cada elemento haya una transicion */
+	transition: all 300ms;
+}
+
+/* Esto ya seria para los enlaces porque yo intentaba darle color en el "menu ul li"
+y debe ser en el "menu a" tambien podria ser para "menu ul li" a y funcionaria */
+#menu a{
+	display: block;
+	color: white;
+	/* Para que no tenga ese subrallado por debajo */
+	text-decoration: none;
+	/* Separaciones */
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#posts{
+	width: 60%;
+	float: left;
+	font-family: Helvetica, Arial;
+}
+
+.post{
+	/* El profe ha puesto solo el 'padding' y yo he puesto uno left porque con el
+	'padding' centra todo el texto es de decir que le 5px por la izquierda y tambien
+	por la derecha */
+	padding-left: 5px;
+}
+
+h2{
+	font-family: Helvetica, Arial;
+	font-size: 30px;
+	color: #333;
+}
+
+.post .date{
+	/* Esto es porque el span que es donde se encuentra el '.date' viene por defecto
+	en display 'in-lineblock' para que aparezca uno detras de otro */
+	display: block;
+	color: gray;
+	margin-top: 5px;
+}
+
+.post p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	/* Esta es la separacion que hay entre lineas */
+	line-height: 20px;
+	/* Para poder dejar el texto bien centrado por ambos lados  */
+	text-align: justify;
+}
+
+/*
+Asi es como lo ha hecho el profe, dejo este modelo por si me diese algun problema en el
+futuro 'root/maquetacion de articulos 9.03'
+.button-more{
+	font-size: 14px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	background: #235E3D;
+	color: white;
+	text-decoration: none;
+	margin-top: 10px;
+	width: 70px;
+}
+*/
+
+.button-more{
+	text-decoration: none;
+	color: white;
+	padding: 7px;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+
+/* Estamos colocando todo el contenido de 'aside' en el lado derecho de la pagina
+dandole estilos predetermidos */
+#sidebar{
+	font-family: Helvetica, Arial;
+	width: 31%;
+	float: right;
+}
+
+#sidebar h4{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 10px;
+	color: #333;
+	/* Metemos una imagen detras del texto */
+	background: url(../img/lines.png) repeat-x;
+}
+
+
+/* Hemos metido el texto 'h4' dentro de un span para poder darle color al fondo de
+ese texto y asi no aparezca la imagen detras y ensucie asi el texto */
+#sidebar span{
+	background: white;
+	padding: 5px;
+}
+
+#sidebar img{
+	/* Esto fue lo que yo hice desde un principio para ajustar la imagen y servia
+	pero es mejor el metodo del profe
+	width: 150px;
+	height: 130px;
+	*/
+	width: 100%;
+}
+
+#sidebar p{
+	font-size: 15px;
+	text-align: justify;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"]{
+	padding: 5px;
+	border-radius: 2px;
+	border: 1px solid gray;
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+form input[type="submit"]{
+	background: #eee;
+	padding: 5px;
+	border: 1px solid grey;
+	cursor: pointer;
+}
+
+footer {
+	font-family: Helvetica, Arial;
+	color: white;
+	height: 47px;
+	background: rgba(51, 51, 51, 0.70);
+	margin: 0px auto;
+	width: 65%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 50px;
+	line-height: 47px;
+}
+
+.bx-wrapper, .bx-viewport{
+	/* El '!important' es para machacar cualquier cosa que
+	pueda hacer */
+	height: 250px !important;
+}
+
+
+/* He seleccionado los botones que me aparecian por defecto y los
+he quitado para añadirle un auto swipe */
+.bx-prev, .bx-next{
+	display: none;
+}
+
+
+/* Le quito los bordes a la imagens */
+.bx-wrapper{
+	border: 0px !important;
+}
+
+.cambiar-colores{
+	margin-top: 50px;
+}
+
+#selector-theme{
+	/* El 'position: fixed' esta hecho para despues darle un 'top' que
+	empieza a contar desde el margen de la pantalla tambien serviria 'absolute'
+	en vez de fixed. Si se pusiese otro valor como 'relative' el objeto se
+	comportaria de otra manera. Buscar ejeplos en google */
+	position: fixed;
+	top: 40%;
+	background: rgb(51, 51, 51, 0.5);
+	width: 50px;
+	height: 100px;
+}
+
+/*
+Asi es como yo lo estaba haciendo... quedaba bien. Supongo que tambien hay que
+cambiarle la 'url()' pero no se como lo hara creando una en bloque
+#to-green{
+	width: 50px;
+	height: 25px;
+	background: rgb(0, 255, 0, 0.5);
+	color: green;
+	margin-bottom: 10px;
+}
+
+#to-red{
+	width: 50px;
+	height: 25px;
+	background: rgb(255, 0, 0, 0.5);
+	color: green;
+	margin-bottom: 12px;
+}
+
+#to-blue{
+	width: 50px;
+	height: 25px;
+	background: rgb(0, 0, 255, 0.5);
+	color: green;
+	margin-top: 15px;
+}
+*/
+
+/* Despues de ver el margin-tip y margin-bottom como se comporta con
+los divs me doy cuenta de que esta manera de seleccionarlos te da esos atributos
+para cada uno individualmente como lo que estaba haciendo yo arriba pero con
+muchas menos lineas de codigo
+Son estilos comunes */
+#to-green,
+#to-red,
+#to-blue{
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	/* El display y el margin lo ha hecho para centrar los divs */
+	display: block;
+	margin: 0px auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+#to-green{
+	background: #235E3D;
+}
+
+#to-red{
+	background: #CA3413;
+}
+
+#to-blue{
+	background: #1F87C4;
+}
+
+.subir{
+	color: white;
+	display: block;
+	text-decoration: none;
+	float: right;
+}
+
+#box {
+	width: 60%;
+	float: left;
+	margin-top: 40px;
+}
+
+#acordeon {
+	margin-top: 20px;
+}
+
+#reloj {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	color: #333;
+	border: 5px dashed #333;
+	width: 25%;
+	padding: 30px;
+	/* El profe me ponia que utilizase el margin: 0px auto pero me quedaba muy
+	raro. lo que he cambiado por text align:center y mucho mejor, siempre
+	queda centrado. Ahora veo que si puedo usar el margin 0px... si lo combino
+	con el text-align. */
+	text-align: center;
+	margin: 0px auto;
+}
+
+#form_contact {
+	width: 60%;
+	font-family: Helvetica, Arial;
+}
+
+#form_contact label{
+	display: block;
+}
+
+#form_contact select {
+	margin-top: 3px;
+	margin-bottom: 20px;
+}
+
+#form_contact input {
+	margin-bottom: 20px;
+}
+
+.form-error {
+		color: white;
+    background: red;
+    font-size: 16px;
+    float: right;
+    width: 60%;
+    padding: 12px;
+}
